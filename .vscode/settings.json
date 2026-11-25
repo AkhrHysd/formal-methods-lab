@@ -1,0 +1,3 @@
+{
+  "files.watcherExclude": { "**/.tools/**": true, "**/.cache/**": true, "**/.lake/**": true }
+}

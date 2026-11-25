@@ -1,0 +1,7 @@
+.git
+.tools
+.cache
+**/node_modules
+**/.lake
+.env
+.env.*

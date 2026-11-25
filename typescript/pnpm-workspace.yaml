@@ -1,0 +1,5 @@
+minimumReleaseAgeExclude:
+  - '@types/node@26.6.10'
+
+# Only the explicitly reviewed version above may bypass the release-age gate.
+minimumReleaseAgeStrict: true

@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-11-25",
+  "versions": {
+    "node": "26.13.1",
+    "pnpm": "12.23.0",
+    "typescript": "7.0.2",
+    "vitest": "5.1.1",
+    "elan": "4.4.0",
+    "lean": "4.36.0",
+    "java": "21.0.13.1+2",
+    "tla": "1.7.4"
+  },
+  "lean": "leanprover/lean4:v4.36.0",
+  "platforms": {
+    "darwin-arm64": {
+      "node": {
+        "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-darwin-arm64.tar.gz",
+        "sha256": "aec2514ea1ceb2ba52455e9ec65986f6749a06dd759e5db2a72e6889668c9735"
+      },
+      "java": {
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.13.1_2.tar.gz",
+        "sha256": "48067f2b7c958ed104a9d8a5749be7d25220b0a356b4d2d1bcfaab3e16ad0b14"
+      },
+      "elan": {
+        "url": "https://github.com/leanprover/elan/releases/download/v4.4.0/elan-aarch64-apple-darwin.tar.gz",
+        "sha256": "27af24edeace839730e8c9119783f12d5f694327d4771605021ca09db1ab0a87"
+      },
+      "pnpm": {
+        "url": "https://registry.npmjs.org/@pnpm/exe.darwin-arm64/-/exe.darwin-arm64-12.23.0.tgz",
+        "sha256": "cb84a7c1c058b5de050d70770676f923f98ac5726ab4a0611f26e6168819b5a0"
+      }
+    },
+    "darwin-x64": {
+      "node": {
+        "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-darwin-x64.tar.gz",
+        "sha256": "82bb96078a24ca50b9c9a38f2379e6be6d87171fcd400fc14c8934b3bce96e2f"
+      },
+      "java": {
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_x64_mac_hotspot_21.0.13.1_2.tar.gz",
+        "sha256": "1b5eff1741bb83d32e2e19aade71452bb42e40f047c01d3e178d438304c9a26d"
+      },
+      "elan": {
+        "url": "https://github.com/leanprover/elan/releases/download/v4.4.0/elan-x86_64-apple-darwin.tar.gz",
+        "sha256": "a5123096d662216ceaf69d68d6bbabb118c024d20d270bf0d639a830dd4ff97e"
+      },
+      "pnpm": {
+        "url": "https://registry.npmjs.org/@pnpm/exe.darwin-x64/-/exe.darwin-x64-12.23.0.tgz",
+        "sha256": "b2f23c467430d80d5022ac007a2b1c8f7b617bb807125c09f26ddfbaf265da22"
+      }
+    },
+    "linux-arm64": {
+      "node": {
+        "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-linux-arm64.tar.gz",
+        "sha256": "80a330b35415382878df18d41afbd106ea89bfb3be0087d6608e289a14c5cc7d"
+      },
+      "java": {
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.13.1_2.tar.gz",
+        "sha256": "8c72816a6b308842d5ed1f13e5826b69c567da4784f7238d7e800efa71fe54b1"
+      },
+      "elan": {
+        "url": "https://github.com/leanprover/elan/releases/download/v4.4.0/elan-aarch64-unknown-linux-gnu.tar.gz",
+        "sha256": "45cde3006f82f98804c94cf2ca4949d117060a5f3cc8afa62f523759947ee21f"
+      },
+      "pnpm": {
+        "url": "https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.23.0.tgz",
+        "sha256": "986807e3baaf6310b770f3bd456ebf6dc95f469d42c610c0df4a9a3d7f84d498"
+      }
+    },
+    "linux-x64": {
+      "node": {
+        "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-linux-x64.tar.gz",
+        "sha256": "518674de2b621728a5e4486f5fb3b7d2900bb3cc4aa97969edaa463db99f9778"
+      },
+      "java": {
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13.1_2.tar.gz",
+        "sha256": "bb8a93f9ae6e7a693b2b721e85dbeff26ae1a77447985a8d7afcdd9c7cf6222e"
+      },
+      "elan": {
+        "url": "https://github.com/leanprover/elan/releases/download/v4.4.0/elan-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "0e8250aa2be86c7af929ade68db617af9edc8b9ccf6eaf5ece228250d0d032e2"
+      },
+      "pnpm": {
+        "url": "https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.23.0.tgz",
+        "sha256": "8aeb5ad2b7e71fc3f81f572fb3107449fc0ef8a9be4e4cdf51d9d4992921bb51"
+      }
+    }
+  },
+  "tla": {
+    "url": "https://github.com/tlaplus/tlaplus/releases/download/v1.7.4/tla2tools.jar",
+    "sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88"
+  }
+}

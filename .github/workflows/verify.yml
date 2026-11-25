@@ -1,0 +1,46 @@
+name: Verify
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      VERIFY_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Build the actual Dev Container from pinned tools
+        run: docker build --tag formal-methods-lab --file .devcontainer/Dockerfile .
+      - name: Verify in a clean container
+        run: |
+          docker run --rm \
+            -e VERIFY_BASE \
+            -v "$PWD:/workspaces/formal-methods-lab" \
+            -w /workspaces/formal-methods-lab \
+            formal-methods-lab bash -euc '
+              git config --global --add safe.directory /workspaces/formal-methods-lab
+              python3 scripts/setup.py
+              node --test scripts/checks.test.mjs
+              node scripts/verify.mjs
+              node scripts/selftest.mjs
+            '
+      - name: Preserve verification evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: verification-evidence
+          path: |
+            .cache/*/*.log
+            .cache/verify-*/vitest.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7

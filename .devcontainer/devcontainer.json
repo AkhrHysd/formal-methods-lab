@@ -1,0 +1,16 @@
+{
+  "name": "Formal Methods Lab",
+  "build": { "dockerfile": "Dockerfile", "context": ".." },
+  "workspaceFolder": "/workspaces/formal-methods-lab",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/formal-methods-lab,type=bind",
+  "remoteUser": "root",
+  "postCreateCommand": "python3 scripts/setup.py && node scripts/verify.mjs",
+  "customizations": {
+    "vscode": {
+      "extensions": ["leanprover.lean4", "alygin.vscode-tlaplus", "vitest.explorer"],
+      "settings": {
+        "tlaplus.java.home": "/opt/formal-tools/java"
+      }
+    }
+  }
+}

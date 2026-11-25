@@ -1,0 +1,10 @@
+name = "formal-methods-lab"
+version = "0.1.0"
+defaultTargets = ["Samples"]
+
+[[lean_lib]]
+name = "Samples"
+roots = ["Samples.Basic"]
+
+[[lean_lib]]
+name = "Exercises"

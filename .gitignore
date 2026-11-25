@@ -1,0 +1,14 @@
+.tools/
+.cache/
+node_modules/
+.lake/
+*.olean
+*.ilean
+*.trace
+states/
+*_TTrace_*.tla
+*_TTrace_*.bin
+__pycache__/
+.DS_Store
+.env
+.env.*

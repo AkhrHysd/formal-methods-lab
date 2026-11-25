@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "samples": {
+    "typescript": {
+      "files": ["samples/smoke.ts", "samples/smoke.test.ts"],
+      "tests": ["samples/smoke.test.ts"]
+    },
+    "lean": {
+      "modules": ["Samples.Basic"],
+      "declarations": ["Samples.toolchainSmoke"]
+    },
+    "tla": [
+      {
+        "module": "samples/Counter/Counter.tla",
+        "config": "samples/Counter/Counter.cfg",
+        "expected": { "kind": "success" }
+      },
+      {
+        "module": "samples/BrokenCounter/BrokenCounter.tla",
+        "config": "samples/BrokenCounter/BrokenCounter.cfg",
+        "expected": {
+          "kind": "invariant-violation",
+          "invariant": "TypeOK",
+          "trace": ["count = 0", "count = 1", "count = 2", "count = 3", "count = 4"]
+        }
+      }
+    ]
+  },
+  "exercises": []
+}
