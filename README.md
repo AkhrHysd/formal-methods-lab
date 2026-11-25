@@ -41,7 +41,7 @@ Windows は WSL2 + Docker Desktop を使用する。初回は公式配布サイ�
 4. `postCreateCommand` が依存関係を frozen lockfile で導入し、全サンプルを検証する。
 5. 統合ターミナルで `node scripts/verify.mjs` を実行できれば準備完了。
 
-Lean 4、TLA+、Vitest の VS Code 拡張を推奨・自動導入する。拡張の更新はエディタ管理であり、
+Lean 4（leanprover.lean4）、[公式 TLA+ 拡張](https://marketplace.visualstudio.com/items?itemName=tlaplus.vscode-ide)（tlaplus.vscode-ide）、Vitest の VS Code 拡張を推奨・自動導入する。拡張の更新はエディタ管理であり、
 機械検証の根拠は固定されたコマンドラインツールとする。Lean のファイルは `lean/` の下で編集する。
 Lean の Infoview でゴールを確認し、CI と同じコマンドで最終検証する。
 

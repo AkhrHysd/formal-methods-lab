@@ -18,6 +18,7 @@ node scripts/verify.mjs
 node scripts/selftest.mjs
 ```
 
+- 状態・履歴・結果判定の単体テスト: 5件成功。
 - TypeScript strict 型検査: 成功。
 - Vitest 環境確認サンプル: 1件成功。
 - Lean サンプル定理: Lake ビルド・警告検査・公理依存の監査に成功。
@@ -28,12 +29,18 @@ node scripts/selftest.mjs
 - テスト用の不正な証明・仕様は `.cache/selftest-*/` の隔離コースに生成する。
   学習用ディレクトリには配置せず、進捗表も変更しない。
 
-証跡: `.cache/selftest-ItKUAl/`。TLC はローカルポートを使うため、
+証跡: `.cache/verify-OKTCc0/`、`.cache/selftest-ItKUAl/`。TLC はローカルポートを使うため、
 この作業環境のサンドボックス外で実行した。通常のローカル端末・コンテナでは同じコマンドを使う。
 
 ## クリーンな Linux / Dev Container / GitHub Actions
 
-GitHub Actions で実際の Dockerfile のビルドと全検証を実行し、結果を追記する。
+[初回 CI 実行](https://github.com/AkhrHysd/formal-methods-lab/actions/runs/45589409126)で、
+Linux x64 上の Dev Container のクリーンビルド、固定依存関係の導入、単体テスト5件、
+全サンプル、実ツール回帰10ケースが成功した。
+初回は検証後の artifact 保存が root 所有の一時ディレクトリの権限で失敗したため、
+保存前にログを runner から読めるようにする手順を追加した。
+[Verify の実行一覧](https://github.com/AkhrHysd/formal-methods-lab/actions/workflows/verify.yml)で
+最新コミットの検証・ログ保存結果を確認できる。
 ローカルの Docker デーモンは停止していたため、ローカル Docker での実ビルドは未確認。
 VS Code の拡張画面・Infoview の手動操作は未確認。
 

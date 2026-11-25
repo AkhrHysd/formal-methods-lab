@@ -7,7 +7,7 @@
   "postCreateCommand": "python3 scripts/setup.py && node scripts/verify.mjs",
   "customizations": {
     "vscode": {
-      "extensions": ["leanprover.lean4", "alygin.vscode-tlaplus", "vitest.explorer"],
+      "extensions": ["leanprover.lean4", "tlaplus.vscode-ide", "vitest.explorer"],
       "settings": {
         "tlaplus.java.home": "/opt/formal-tools/java"
       }
