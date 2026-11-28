@@ -9,7 +9,7 @@
 | 授業番号 | 学習日 | 学習テーマ | 演習の状態 | 理解度テストの結果 | 復習が必要な概念 | 学習者自身の考察 | 完了承認者・根拠 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 001-proposition | - | 命題（Proposition）と真理値 | in-progress | 合格（チャット） | - | - | - |
-| 002-negation | - | 否定（Negation） | pending | 未評価 | - | - | - |
+| 002-negation | - | 否定（Negation） | complete | 未評価 | - | - | - |
 
 状態は `pending`（未着手）、`in-progress`（学習中）、`completed`（検証完了）。
 完了時には日付（YYYY-MM-DD）、理解度テストの評価、承認者と根拠を記録する。
