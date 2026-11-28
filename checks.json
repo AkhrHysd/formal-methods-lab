@@ -26,5 +26,24 @@
       }
     ]
   },
-  "exercises": []
+  "exercises": [
+    {
+      "id": "001-proposition",
+      "typescript": {
+        "files": ["exercises/001-proposition/proposition.ts", "exercises/001-proposition/proposition.test.ts"],
+        "tests": ["exercises/001-proposition/proposition.test.ts"]
+      }
+    },
+    {
+      "id": "002-negation",
+      "typescript": {
+        "files": ["exercises/002-negation/negation.ts", "exercises/002-negation/negation.test.ts"],
+        "tests": ["exercises/002-negation/negation.test.ts"]
+      },
+      "lean": {
+        "modules": ["Exercises.L002Negation"],
+        "declarations": ["Exercises.L002Negation.threeNotFour", "Exercises.L002Negation.sevenNotZero"]
+      }
+    }
+  ]
 }
