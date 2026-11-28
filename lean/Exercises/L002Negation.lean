@@ -7,3 +7,5 @@ theorem sevenNotZero : ¬ (7 = 0) := by
   sorry
 
 end Exercises.L002Negation
+#eval (!(1 == 2))
+#eval (decide (¬ (1 = 2)))
